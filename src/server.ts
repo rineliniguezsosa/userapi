@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import { mongoconnection } from '../config';
 import { usuarioRouter } from '../routes';
-
+import cors from 'cors';
 
 const app = express()
 
