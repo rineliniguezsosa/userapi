@@ -1,10 +1,13 @@
 import express from 'express';
 import 'dotenv/config';
 import { mongoconnection } from '../config';
+import { usuarioRouter } from '../routes';
+
 
 const app = express()
 
 app.use(express.json());
+app.use('/user',usuarioRouter);
 
 mongoconnection();
 
