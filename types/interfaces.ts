@@ -1,3 +1,16 @@
+import { Document } from 'mongoose';
+
+export interface Usuario extends Document {
+    gender:     string;
+    name:       Name;
+    location:   Location;
+    email:      string;
+    cell:       string;
+    id:         ID;
+    picture:    Picture;
+    nat:        string;
+}
+
 export interface UsuarioRequest {
     results: Result[];
     info:    Info;
