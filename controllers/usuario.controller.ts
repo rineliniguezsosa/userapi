@@ -21,7 +21,9 @@ export const getListUsers = async(requ:Request,resp:Response) =>{
                 state: user.location.state,
                 country: user.location.country,
                 postcode: user.location.postcode
-            }
+            },
+            email:user.email,
+            nat:user.nat
         }))
         console.log("respuesta",resp);
         const user = await usuario.insertMany(data,{ ordered: false })
