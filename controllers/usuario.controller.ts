@@ -6,12 +6,11 @@ import { UsuarioRequest } from '../types/interfaces';
 export const getListUsers = async(requ:Request,resp:Response) =>{
     try {
         const req = await axios.get<UsuarioRequest>(`${process.env.RANDOMUSER}`);
-        console.log("usuarios: ",req);
         const res = await req.data;
-
+       
         const data = res.results.map((user)=> ({
             gender: user.gender,
-            name: user.name,
+            name: user.name.first,
             location:{
                 street:{
                     number:user.location.street.number,
@@ -25,7 +24,7 @@ export const getListUsers = async(requ:Request,resp:Response) =>{
             email:user.email,
             nat:user.nat
         }))
-        console.log("respuesta",resp);
+        
         const user = await usuario.insertMany(data,{ ordered: false })
 
         resp.json({
