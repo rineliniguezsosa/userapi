@@ -42,3 +42,20 @@ export const getListUsers = async(requ:Request,resp:Response) =>{
         })
     }
 }
+
+export const getUsers = async(requ:Request,resp:Response) =>{
+    try {
+        const listusers =  await usuario.find();
+
+        resp.json({
+            status:true,
+            data: listusers
+        })
+    } catch (error) {
+        console.log('error al obtener: ',error);
+        resp.json({
+            status:false,
+            message:'Algo sucedio intenta de nuevo'
+        })
+    }
+}
