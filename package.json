@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/rineliniguezsosa/userapi/issues"
   },
-  "homepage": "https://github.com/rineliniguezsosa/userapi#readme"
+  "homepage": "https://github.com/rineliniguezsosa/userapi#readme",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  }
 }
