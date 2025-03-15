@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "name": "userapi",
+  "version": "1.0.0",
+  "description": "api para la gestión de los usuarios",
+  "main": "server.ts",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rineliniguezsosa/userapi.git"
+  },
+  "keywords": [
+    "usuarios",
+    "userapi"
+  ],
+  "author": "rinel iniguez sosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rineliniguezsosa/userapi/issues"
+  },
+  "homepage": "https://github.com/rineliniguezsosa/userapi#readme"
 }
