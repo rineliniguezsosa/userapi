@@ -73,6 +73,8 @@ export const deleteUser = async(requ:Request,resp:Response) => {
         })
 
     } catch (error) {
+        console.log('error al obtener: ',error);
+        
         resp.json({
             status:false,
             message:'Algo salio mal en la eliminación',
