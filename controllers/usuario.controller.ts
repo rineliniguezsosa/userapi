@@ -63,7 +63,9 @@ export const getUsers = async(requ:Request,resp:Response) =>{
 export const deleteUser = async(requ:Request,resp:Response) => {
     try {
         const { _id } = requ.params
-        const deleteuser = await usuario.deleteOne({_id:_id});
+        console.log(_id);
+        // const deleteuser = await usuario.deleteOne({_id:_id});
+        
         
 
     } catch (error) {
