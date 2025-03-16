@@ -5,4 +5,4 @@ export const usuarioRouter = Router();
 
 usuarioRouter.get('/get/userlist',getListUsers)
 usuarioRouter.get('/get/all',getUsers)
-usuarioRouter.delete('/delete',deleteUser)
+usuarioRouter.delete('/delete/:_id',deleteUser)
