@@ -63,12 +63,19 @@ export const getUsers = async(requ:Request,resp:Response) =>{
 export const deleteUser = async(requ:Request,resp:Response) => {
     try {
         const { _id } = requ.params
-        console.log("_id",_id);
-        // const deleteuser = await usuario.deleteOne({_id:_id});
-        
-        
+    
+        const deleteuser = await usuario.deleteOne({_id:_id});
+
+        resp.json({
+            status:true,
+            message:'registro eliminado',
+            data:deleteuser
+        })
 
     } catch (error) {
-        
+        resp.json({
+            status:false,
+            message:'Algo salio mal en la eliminación',
+        })
     }
 }
