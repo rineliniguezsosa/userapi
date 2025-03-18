@@ -84,7 +84,6 @@ export const deleteUser = async(requ:Request,resp:Response) => {
 
 export const saveUser = async(requ:Request,resp:Response) =>{
     const newuser = new usuario({...requ.body})
-    console.log("save user:",requ.body);
     try {
         const user = await newuser.save(requ.body);
     
