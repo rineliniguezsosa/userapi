@@ -88,9 +88,18 @@ export const saveUser = async(requ:Request,resp:Response) =>{
     try {
         const user = await newuser.save(requ.body);
          console.log("user",user);
+        resp.json({
+            status:true,
+            message:'Registro insertado correctamente :)',
+            data:user
+        })
          
     } catch (error) {
         console.log(error);
         
+        resp.json({
+            status:false,
+            message:'Algo salio mal en la eliminación',
+        })
     }
 }
