@@ -1,7 +1,7 @@
-import { Usuario } from './../types/interfaces';
+import { Usuario } from '../types';
 import { model,Schema } from 'mongoose';
 
-const user :Schema<Usuario> = new Schema({
+const userschema :Schema<Usuario> = new Schema({
     gender:{
         type:String
     },
@@ -39,4 +39,4 @@ const user :Schema<Usuario> = new Schema({
     }
 })
 
-export const usuario = model<Usuario>('usuario',user);
+export const usuario = model<Usuario>('usuario',userschema);
