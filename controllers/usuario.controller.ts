@@ -106,9 +106,12 @@ export const saveUser = async(requ:Request,resp:Response) =>{
 
 export const getUserById = async(requ:Request,resp:Response) =>{
     const { _id } = requ.params;
+    console.log("_id aqui",_id);
+    
     try {
         const req = await usuario.find({_id:_id});
-
+        console.log("sjjjdjd",req);
+        
         resp.json({
             status:true,
             data:req
