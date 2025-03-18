@@ -87,7 +87,7 @@ export const saveUser = async(requ:Request,resp:Response) =>{
     console.log("save user:",requ.body);
     try {
         const user = await newuser.save(requ.body);
-         console.log("user",user);
+    
         resp.json({
             status:true,
             message:'Registro insertado correctamente :)',
@@ -106,12 +106,10 @@ export const saveUser = async(requ:Request,resp:Response) =>{
 
 export const getUserById = async(requ:Request,resp:Response) =>{
     const { _id } = requ.params;
-    console.log("_id aqui",_id);
     
     try {
         const req = await usuario.find({_id:_id});
-        console.log("sjjjdjd",req);
-        
+
         resp.json({
             status:true,
             data:req
@@ -122,6 +120,27 @@ export const getUserById = async(requ:Request,resp:Response) =>{
         resp.json({
             status:false,
             message:'Algo salio mal en la obtención del usuario',
+        })
+    }
+}
+
+export const updateUserById = async(requ:Request,resp:Response) =>{
+    const { _id } = requ.params;
+    const { data } = requ.body;
+    
+    try {
+        const req = await usuario.updateOne({_id},{$set:data});
+     
+        resp.json({
+            status:true,
+            data:req
+        })
+    } catch (error) {
+        console.log(error);
+        
+        resp.json({
+            status:false,
+            message:'Algo salio mal en la actualización del usuario',
         })
     }
 }
