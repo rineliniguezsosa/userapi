@@ -84,7 +84,7 @@ export const deleteUser = async(requ:Request,resp:Response) => {
 
 export const saveUser = async(requ:Request,resp:Response) =>{
     try {
-        console.log(requ);
+        console.log("save user:",requ.body);
          
     } catch (error) {
         
