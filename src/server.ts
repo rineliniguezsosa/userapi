@@ -8,7 +8,7 @@ const port = process.env.PORT || 4000;
 const app = express()
 
 app.use(cors({
-    origin:'https://rineliniguezsosa.github.io/userapp',
+    origin:'https://rineliniguezsosa.github.io',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
