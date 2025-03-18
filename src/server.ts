@@ -6,7 +6,10 @@ import cors from 'cors';
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin:'https://rineliniguezsosa.github.io/userapp',
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 app.use('/user',usuarioRouter);
 
