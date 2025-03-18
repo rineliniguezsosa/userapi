@@ -3,6 +3,7 @@ import 'dotenv/config';
 import { mongoconnection } from './config';
 import { usuarioRouter } from './routes';
 import cors from 'cors';
+const port = process.env.PORT || 4000;
 
 const app = express()
 
@@ -16,6 +17,6 @@ app.use('/user',usuarioRouter);
 
 mongoconnection();
 
-app.listen(process.env.PORT,()=>{
-    console.log(`Servidor ejecutandose en http://localhost:${process.env.PORT}`);
+app.listen(port,()=>{
+    console.log(`Servidor ejecutandose en http://localhost:${port}`);
 })
