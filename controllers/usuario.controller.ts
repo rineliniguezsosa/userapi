@@ -99,7 +99,7 @@ export const saveUser = async(requ:Request,resp:Response) =>{
         
         resp.json({
             status:false,
-            message:'Algo salio mal en la eliminación',
+            message:'Algo salio mal en la inserción',
         })
     }
 }
