@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.usuario = void 0;
 const mongoose_1 = require("mongoose");
-const user = new mongoose_1.Schema({
+const userschema = new mongoose_1.Schema({
     gender: {
         type: String
     },
@@ -38,4 +38,4 @@ const user = new mongoose_1.Schema({
         type: String
     }
 });
-exports.usuario = (0, mongoose_1.model)('usuario', user);
+exports.usuario = (0, mongoose_1.model)('usuario', userschema);
