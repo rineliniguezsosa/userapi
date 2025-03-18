@@ -103,3 +103,7 @@ export const saveUser = async(requ:Request,resp:Response) =>{
         })
     }
 }
+
+export const getUserById = async(requ:Request,resp:Response) =>{
+
+}
