@@ -105,5 +105,20 @@ export const saveUser = async(requ:Request,resp:Response) =>{
 }
 
 export const getUserById = async(requ:Request,resp:Response) =>{
+    const { _id } = requ.params;
+    try {
+        const req = await usuario.find({_id:_id});
 
+        resp.json({
+            status:true,
+            data:req
+        })
+    } catch (error) {
+        console.log(error);
+        
+        resp.json({
+            status:false,
+            message:'Algo salio mal en la obtención del usuario',
+        })
+    }
 }
